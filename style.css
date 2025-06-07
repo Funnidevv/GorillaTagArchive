@@ -1,44 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
 
-body, html {
+* {
   margin: 0;
   padding: 0;
-  font-family: 'Orbitron', sans-serif;
-  background: #0a0a0a;
-  color: #fff;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
   height: 100%;
-  overflow-x: hidden;
+  font-family: 'Orbitron', sans-serif;
+  background: black;
+  color: white;
+  overflow: hidden;
 }
 
 #starCanvas {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: -2;
+  z-index: -1;
   width: 100%;
   height: 100%;
-  display: block;
   background: black;
 }
 
-.background {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle, #222 0%, #000 100%);
-  z-index: -1;
-  animation: pulse 6s infinite alternate;
-}
-
-@keyframes pulse {
-  0% { filter: brightness(1); }
-  100% { filter: brightness(1.2); }
-}
-
 .container {
-  padding: 50px 20px;
+  position: relative;
+  z-index: 1;
   max-width: 700px;
-  margin: auto;
+  margin: 0 auto;
+  padding: 80px 20px;
   text-align: center;
 }
 
@@ -49,7 +41,7 @@ h1 {
 }
 
 .subtitle {
-  margin-bottom: 40px;
+  margin: 20px 0 40px;
   color: #ccc;
   font-size: 1.2em;
 }
@@ -63,15 +55,15 @@ h1 {
 .download-item {
   display: flex;
   justify-content: space-between;
-  background: #111;
+  background: rgba(0, 0, 0, 0.6);
   padding: 15px 25px;
   border: 1px solid #ff00ff;
   border-radius: 10px;
-  transition: background 0.3s;
+  backdrop-filter: blur(4px);
 }
 
 .download-item:hover {
-  background: #1a1a1a;
+  background: rgba(20, 20, 20, 0.7);
 }
 
 .download-item a {
