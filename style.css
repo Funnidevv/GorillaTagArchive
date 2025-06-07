@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Orbitron', sans-serif;
+  background: #0a0a0a;
+  color: #fff;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, #222 0%, #000 100%);
+  z-index: -1;
+  animation: pulse 6s infinite alternate;
+}
+
+@keyframes pulse {
+  0% { filter: brightness(1); }
+  100% { filter: brightness(1.2); }
+}
+
+.container {
+  padding: 50px 20px;
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3em;
+  color: #ff00ff;
+  text-shadow: 0 0 10px #ff00ff;
+}
+
+.subtitle {
+  margin-bottom: 40px;
+  color: #ccc;
+  font-size: 1.2em;
+}
+
+.download-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.download-item {
+  display: flex;
+  justify-content: space-between;
+  background: #111;
+  padding: 15px 25px;
+  border: 1px solid #ff00ff;
+  border-radius: 10px;
+  transition: background 0.3s;
+}
+
+.download-item:hover {
+  background: #1a1a1a;
+}
+
+.download-item a {
+  color: #00ffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.download-item a:hover {
+  text-decoration: underline;
+}
